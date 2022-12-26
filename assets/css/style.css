@@ -2,7 +2,7 @@ body {
     margin: 0;
     font-family: 'Manrope', sans-serif;
 
-    background-color: #68412B;
+    background-color: #FFF;
     font-size: 15px;
     line-height: 1.6;
     color: #333;
@@ -13,7 +13,9 @@ body {
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,6 +57,7 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: cover;
   border-radius: 30px;
   box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px;
+  -webkit-box-shadow: rgb(0 0 0 / 50%) 0px 0px 24px 2px;
 }
 
 
@@ -194,6 +197,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom-style: solid;
 
   transition: color .1s linear;
+  -webkit-transition: color .1s linear;
 }
 
 
@@ -214,6 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     position: fixed;
     top: 0;
     left: 0;
@@ -227,9 +232,22 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
 }
 
-.header__logo {
+.header__menu {
+  background-image: url(../images/menu1.png);
+
+  width: 33px;
+  height: 20px;
+
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
 
+.header__menu:hover {
+  background-image: url(../images/menu2.png);
+
+  width: 33px;
+  height: 20px;
+}
 
 /* Nav */
 .nav {
@@ -240,7 +258,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav__link {
     display: inline-block;
-    vertical-align: top;
     margin: 0 15px;
     position: relative;
 
@@ -248,7 +265,17 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 
     transition: color .1s linear;
+    -webkit-transition: color .1s linear;
 }
+
+.nav__link_menu {
+
+  display: inline-block;
+  margin: 0 15px;
+  position: relative;
+}
+
+
 
 .nav__link:after {
     content: "";
@@ -265,6 +292,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 
     transition: opacity .1s linear;
+    -webkit-transition: opacity .1s linear;
 }
 
 .nav__link:hover {
@@ -302,6 +330,12 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 30px 30px 0 0;
 }
 
+.ul-fixed {
+  list-style-type: none;
+}
+
+
+
 .footer__katalog,
 .footer__info,
 .footer__social {
@@ -333,6 +367,7 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
 
   transition: color .1s linear;
+  -webkit-transition: color .1s linear;
 }
 
 
@@ -353,6 +388,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 22px;
 
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
 
 .social__logo_vk {
@@ -362,6 +398,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 22px;
 
   transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
 }
 
 .social__logo_inst:hover {
